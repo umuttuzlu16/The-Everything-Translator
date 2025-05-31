@@ -1,2 +1,2 @@
-# Mors-Code-Translator
-Are you have some secret messages? Try Mors Code.
+# The Everything Translator
+We dont translate languages. We translate the "others"
