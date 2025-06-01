@@ -29,3 +29,4 @@ class ent():
             string=string,
             index=index
         )
+        self.ent.pack()
