@@ -19,5 +19,13 @@ class btn():
         )
         self.button.place(x=x, y=y)
 
-
-        
+class ent():
+    def __init__(self, frame, width, string, index):
+        self.ent = tk.Entry(
+            frame,
+            width=width,
+        )
+        self.ent.insert(
+            string=string,
+            index=index
+        )
