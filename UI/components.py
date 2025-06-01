@@ -11,7 +11,7 @@ class btn():
             fg=fg,
             activebackground=activebackground,
             activeforeground=activeforeground,
-            font=font,   # font=24 hatalıydı, tuple formatında olmalı
+            font=font,
             height=height,
             width=width,
             cursor=cursor,
@@ -44,15 +44,22 @@ class combo():
         )
         self.ent.place(x=x, y=y)
 
+    def get(self):
+        return self.ent.get()
+
 
 class TextBox:
-    def __init__(self, frame, x, y, width, height, font=("Arial", 12), state="normal"):
+    def __init__(self, frame, x, y, width, height, text, font=("Arial", 12), state="normal"):
         self.text = tk.Text(
             frame,
             font=font,
             state=state
         )
         self.text.place(x=x, y=y, width=width, height=height)
+        self.text.insert(
+            index="1.0",
+            chars=text
+        )
 
     def get(self):
         return self.text.get("1.0", tk.END).strip()
