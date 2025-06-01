@@ -8,4 +8,4 @@ class Scene():
         self.scene.title("The Everything Translator")
 
     def run(self):
-        self.scene.mainloop()
+        self.scene.mainloop
