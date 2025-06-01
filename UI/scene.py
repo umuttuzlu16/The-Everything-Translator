@@ -1,8 +1,11 @@
 import tkinter as tk
 from tkinter import ttk
 
-def frame():
-    scene = tk.Tk()
-    scene.geometry("1080x720")
-    scene.title("The Everything Translator")
-    scene.mainloop
+class Scene():
+    def __init__(self):
+        self.scene = tk.Tk()
+        self.scene.geometry("1080x720")
+        self.scene.title("The Everything Translator")
+
+    def run(self):
+        self.scene.mainloop()
