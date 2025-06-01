@@ -12,12 +12,10 @@ class btn():
             activebackground=activebackground,
             activeforeground=activeforeground,
             font=font,
-            height=height,
-            width=width,
             cursor=cursor,
             command=command
         )
-        self.button.place(x=x, y=y)
+        self.button.place(x=x, y=y, height=height, width=width)
 
 class ent():
     def __init__(self, frame, width, string, index):
@@ -46,7 +44,6 @@ class combo():
 
     def get(self):
         return self.ent.get()
-
 
 class TextBox:
     def __init__(self, frame, x, y, width, height, text, font=("Arial", 12), state="normal"):

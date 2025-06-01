@@ -1,13 +1,16 @@
 from UI import components
-from Translates import change
 from Translates import translator
 
 def setup(app):
     global user, trans, option
 
-    user = components.TextBox(app.scene, 25, 25, 502.5, 600, "", ("Arial", 12), "normal")
-    trans = components.TextBox(app.scene, 540, 25, 502.5, 600, "", ("Arial", 12), "disabled")
+    user = components.TextBox(app.scene, 25, 25, 297.5, 360, "", ("Arial", 12), "normal")
+    trans = components.TextBox(app.scene, 397.5, 25, 297.5, 360, "", ("Arial", 12), "disabled")
 
-    option = components.combo(app.scene, 25, 650, "Languages", ("Binary", "Mors"), "readonly")
+    option = components.combo(app.scene, 25, 405, "Languages", ("Binary", "Mors"), "readonly")
 
-    components.btn(app.scene, 75, 650, 25, 75, "Translate", "grey", lambda: translator.language(app), "black", "green", "red", "Arial", "hand2")
+    components.btn(app.scene, 200, 405, 150, 60, "Translate", "white", lambda: translator.language(app), "black", "grey", "white", "Arial", "hand2")
+    components.btn(app.scene, 347.5, 60, 25, 25, "", "white", lambda: blank(), "black", "grey", "white", "Arial", "hand2")
+
+def blank():
+    pass
