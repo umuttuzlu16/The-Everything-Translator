@@ -1,3 +1,4 @@
-from UI.scene import frame
+from UI import scene
 
-frame()
+app = scene.Scene()
+app.run()
