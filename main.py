@@ -1,11 +1,9 @@
 from UI import scene
 from UI import place
+from Translates import change
 
 app = scene.Scene()
 
-place.user_text(app)
-place.translate_text(app)
-
-place.lang(app)
+place.setup(app)
 
 app.run()
