@@ -49,12 +49,10 @@ class TextBox:
     def __init__(self, frame, x, y, width, height, font=("Arial", 12), state="normal"):
         self.text = tk.Text(
             frame,
-            width=width,
-            height=height,
             font=font,
             state=state
         )
-        self.text.place(x=x, y=y)
+        self.text.place(x=x, y=y, width=width, height=height)
 
     def get(self):
         return self.text.get("1.0", tk.END).strip()
