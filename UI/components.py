@@ -30,6 +30,8 @@ class ent():
             index=index
         )
         self.ent.pack()
+    def get(self):
+        return self.ent.get()
 
 class combo():
     def __init__(self, frame, x, y, text, values, state):
