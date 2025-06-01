@@ -30,3 +30,14 @@ class ent():
             index=index
         )
         self.ent.pack()
+
+class combo():
+    def __init__(self, frame, x, y, text, values, state):
+        self.ent = tk.StringVar()
+        self.ent = ttk. Combobox(
+            frame,
+            textvariable=text,
+            values=values,
+            state=state
+        )
+        self.ent.place(x=x, y=y)
