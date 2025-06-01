@@ -41,3 +41,30 @@ class combo():
             state=state
         )
         self.ent.place(x=x, y=y)
+
+
+class TextBox:
+    def __init__(self, frame, x, y, width, height, font=("Arial", 12), state="normal"):
+        self.text = tk.Text(
+            frame,
+            width=width,
+            height=height,
+            font=font,
+            state=state
+        )
+        self.text.place(x=x, y=y)
+
+    def get(self):
+        return self.text.get("1.0", tk.END).strip()
+
+    def set(self, content):
+        self.text.config(state="normal")
+        self.text.delete("1.0", tk.END)
+        self.text.insert("1.0", content)
+        self.text.config(state="disabled")
+
+    def enable(self):
+        self.text.config(state="normal")
+
+    def disable(self):
+        self.text.config(state="disabled")
