@@ -81,6 +81,6 @@ class label():
             font=font,
             bg=bg,
             fg=fg,
-            wl=wl
+            wraplength=wl
         )
         self.label.place(x=x, y=y)
