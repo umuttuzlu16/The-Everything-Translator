@@ -72,3 +72,15 @@ class TextBox:
 
     def disable(self):
         self.text.config(state="disabled")
+
+class label():
+    def __init__(self,frame, text, x, y, font, bg, fg, wl):
+        self.label = tk.Label(
+            frame,
+            text=text,
+            font=font,
+            bg=bg,
+            fg=fg,
+            wl=wl
+        )
+        self.label.place(x=x, y=y)
