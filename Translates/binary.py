@@ -7,3 +7,11 @@ def binary(app):
     place.trans.enable()
     place.trans.set(translated)
     place.trans.disable()
+
+def ascii(app):
+    text = place.user.get()
+    translated = ''.join(chr(int(text[i:i+8], 2)) for i in range(0, len(text), 8))
+
+    place.trans.enable()
+    place.trans.set(translated)
+    place.trans.disable()

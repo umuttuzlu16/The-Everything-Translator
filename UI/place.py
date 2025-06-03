@@ -10,7 +10,4 @@ def setup(app):
     option = components.combo(app.scene, 25, 405, "Languages", ("Binary", "Mors"), "readonly")
 
     components.btn(app.scene, 200, 405, 150, 60, "Translate", "white", lambda: translator.language(app), "black", "grey", "white", "Arial", "hand2")
-    components.btn(app.scene, 347.5, 60, 25, 25, "", "white", lambda: blank(), "black", "grey", "white", "Arial", "hand2")
-
-def blank():
-    pass
+    components.btn(app.scene, 347.5, 60, 25, 25, "", "white", lambda: translator.exchange(), "black", "grey", "white", "Arial", "hand2")
