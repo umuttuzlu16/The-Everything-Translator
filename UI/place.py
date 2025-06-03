@@ -13,3 +13,4 @@ def setup(app):
     components.btn(app.scene, 347.5, 60, 25, 25, "", "white", lambda: translator.exchange(), "black", "grey", "white", "Arial", "hand2")
 
     user_text = components.label(app.scene, "User", 25, 0, "Arial 12", "white", "black", 100)
+    trans_text = components.label(app.scene, "Translate", 397.5, 0, "Arial 12", "white", "black", 100)
