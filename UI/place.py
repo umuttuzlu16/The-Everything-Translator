@@ -1,8 +1,13 @@
+# UI\place.py
+
 from UI import components
-from Translates import translator
+from Translates import translator, binary
+
+user_label = ""
+trans_label = ""
 
 def setup(app):
-    global user, trans, option
+    global user, trans, option, user_text, trans_text
 
     user = components.TextBox(app.scene, 25, 25, 297.5, 360, "", ("Arial", 12), "normal")
     trans = components.TextBox(app.scene, 397.5, 25, 297.5, 360, "", ("Arial", 12), "disabled")
@@ -12,5 +17,18 @@ def setup(app):
     components.btn(app.scene, 200, 405, 150, 60, "Translate", "white", lambda: translator.language(app), "black", "grey", "white", "Arial", "hand2")
     components.btn(app.scene, 347.5, 60, 25, 25, "", "white", lambda: translator.exchange(), "black", "grey", "white", "Arial", "hand2")
 
-    user_text = components.label(app.scene, "User", 25, 0, "Arial 12", "white", "black", 100)
-    trans_text = components.label(app.scene, "Translate", 397.5, 0, "Arial 12", "white", "black", 100)
+    user_text = components.label(app.scene, "User" , 25, 0, "Arial 12", "white", "black", 100)
+    trans_text = components.label(app.scene, "Tranlate", 397.5, 0, "Arial 12", "white", "black", 100)
+
+def labels():
+    if option.get() == "Binary" and translator.exchange() == False:
+        user_label = "Ascii"
+        trans_label = "Binary"
+        user_text.config(text=user_label, bg="white", font="Arial 12")
+        trans_text.config(text=trans_label, bg="white", font="Arial 12")
+
+    elif option.get() == "Binary" and translator.exchange() == True:
+        user_label = "Binary"
+        trans_label = "Ascii"
+        user_text.config(text=user_label, bg="white", font="Arial 12")
+        trans_text.config(text=trans_label, bg="white", font="Arial 12")

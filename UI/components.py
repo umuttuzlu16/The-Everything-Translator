@@ -1,3 +1,5 @@
+# UI\components.py
+
 import tkinter as tk
 from tkinter import ttk
 
@@ -84,3 +86,10 @@ class label():
             wraplength=wl
         )
         self.label.place(x=x, y=y)
+    
+    def config(self, text, bg, font):
+        self.label.config(
+            text=text,
+            bg=bg,
+            font=font
+        )

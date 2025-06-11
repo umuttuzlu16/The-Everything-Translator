@@ -1,3 +1,5 @@
+# Translates\translator.py
+
 from UI import place
 from Translates import binary
 
@@ -11,6 +13,7 @@ def exchange():
     else:
         to_ascii = False
         return False
+    place.labels()
 
 def language(app):
     opt = place.option.get()
@@ -18,6 +21,7 @@ def language(app):
     print(opt)
     print(asci)
     if opt == "Binary":
+        place.labels()
         if asci == False:
             binary.binary(app)
         else:
