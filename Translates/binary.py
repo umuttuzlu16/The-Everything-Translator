@@ -12,6 +12,7 @@ def binary(app):
 
 def ascii(app):
     text = place.user.get()
+    text = text.replace(" ", "")
     translated = ''.join(chr(int(text[i:i+8], 2)) for i in range(0, len(text), 8))
 
     place.trans.enable()
