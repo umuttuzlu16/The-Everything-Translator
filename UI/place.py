@@ -19,16 +19,3 @@ def setup(app):
 
     user_text = components.label(app.scene, "User" , 25, 0, "Arial 12", "white", "black", 100)
     trans_text = components.label(app.scene, "Tranlate", 397.5, 0, "Arial 12", "white", "black", 100)
-
-def labels():
-    if option.get() == "Binary" and translator.to_ascii == False:
-        user_label = "Ascii"
-        trans_label = "Binary"
-        user_text.config(text=user_label, bg="white", font="Arial 12")
-        trans_text.config(text=trans_label, bg="white", font="Arial 12")
-
-    elif option.get() == "Binary" and translator.to_ascii == True:
-        user_label = "Binary"
-        trans_label = "Ascii"
-        user_text.config(text=user_label, bg="white", font="Arial 12")
-        trans_text.config(text=trans_label, bg="white", font="Arial 12")

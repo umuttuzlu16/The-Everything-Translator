@@ -17,7 +17,7 @@ def exchange():
 def language(app):
     opt = place.option.get()
     asci = to_ascii
-    place.labels()
+
     print(opt)
     print(asci)
     if opt == "Binary":
