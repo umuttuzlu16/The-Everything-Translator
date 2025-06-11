@@ -13,15 +13,14 @@ def exchange():
     else:
         to_ascii = False
         return False
-    place.labels()
 
 def language(app):
     opt = place.option.get()
     asci = to_ascii
+    place.labels()
     print(opt)
     print(asci)
     if opt == "Binary":
-        place.labels()
         if asci == False:
             binary.binary(app)
         else:
