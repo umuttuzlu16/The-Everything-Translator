@@ -2,6 +2,7 @@
 
 from UI import place
 from Translates import binary
+from Translates import morse
 
 to_ascii = False
 
@@ -26,4 +27,7 @@ def language(app):
         else:
             binary.ascii(app)
     elif opt == "Mors":
-        pass
+        if asci == False:
+            morse.morse(app)
+        else:
+            morse.ascii(app)
